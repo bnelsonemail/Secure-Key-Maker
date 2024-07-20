@@ -1,0 +1,22 @@
+Site Functionality
+
+Very basic site to generate random strong passwords
+
+Passwords to include the following:
+    -   20 characters in length
+    -   includes uppercase and lowercase letters
+    -   includes numbers
+    -   includes symbols
+
+Webpage will describe the functionality of the site.
+Webpage will state the requirements of the above.
+Webpage will contain a button to generate password.
+
+Code will initialize by clearing local storage.
+
+
+Functions:
+
+    -   initialize()
+    -   Generate Password ()
+    -   Display Password ()
