@@ -1,9 +1,13 @@
 const btn = document.getElementById('btn');
 const displayPasswordContainer = document.getElementById('password-container')
 
+function clearAppendedData () {
+    displayPasswordContainer.innerHTML = ' ';
+}
+
 btn.addEventListener('click', () => {
     console.log('button clicked')
-    displayPasswordContainer.innerHTML = '';
+    clearAppendedData();
     const generatedPassword = secureKeyMaker();
     displayPasswordContainer.append(generatedPassword)
 
