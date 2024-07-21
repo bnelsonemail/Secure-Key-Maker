@@ -28,5 +28,5 @@ To Be Added Features:
     Suggestions from Russell Trzaska
         1) Checkbox and/or sliders to allow the user to select uppercase, lowercase, symbols, numbers, and total length of the password 
         2) A meter that tells the user how secure the password is based on the letter/number/symbol combination and length 
-        3) Allow the user to regenerate new passwords every time they click the button (Here's a reference for password difficulty >> https://www.reddit.com/.../oc_i_updated_our_famous.../
+        3) Allow the user to regenerate new passwords every time they click the button (Here's a reference for password difficulty >> https://www.reddit.com/r/dataisbeautiful/comments/12qmvlw/oc_i_updated_our_famous_password_table_for_2023/
 )
