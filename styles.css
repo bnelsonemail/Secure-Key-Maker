@@ -8,7 +8,7 @@ body {
     box-sizing: .5rem;
 }
 
-#heading, #description, #parameters, #btn {
+#heading, #description, #parameters, #btn, #password-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,10 +27,10 @@ body {
     margin: 10px;
 }
 
-.header p {
+.header p, #password-container {
     padding-left: 12rem;
     padding-right: 12rem;
-    font-size: 2rem;
+    font-size: 5rem;
 }
 
 .header li {
@@ -73,6 +73,12 @@ button {
         padding: 0 .4rem;
     }
 
+    #password-container {
+        font-size: .4rem;
+        padding: 0 .4rem;
+        padding-top: .4rem;
+    }
+
     .header li {
         font-size: .4rem;
     }
@@ -98,6 +104,12 @@ button {
         font-size: .6rem;
     }
 
+    #password-container {
+        font-size: .8rem;
+        padding: 0 1.5rem;
+        padding-top: 1.5rem;
+    }
+
     button {
         font-size: .8rem;
         padding: 8px 14px;
@@ -109,9 +121,10 @@ button {
         font-size: 2.5rem;
     }
 
-    .header p {
+    #password-container, .header p {
         font-size: 1.2rem;
         padding: 0 1.5rem;
+        padding-top: 1.5rem;
     }
 
     .header li {
@@ -129,9 +142,14 @@ button {
         font-size: 3rem;
     }
 
-    .header p {
+    #password-container, .header p {
         font-size: 1.5rem;
         padding: 0 2rem;
+        padding-top: 2rem;
+    }
+
+    .header li {
+        font-size: 1.2rem;
     }
 
     button {
@@ -145,9 +163,14 @@ button {
         font-size: 3.5rem;
     }
 
-    .header p {
-        font-size: 1.8rem;
+    #password-container, .header p {
+        font-size: 2.3rem;
         padding: 0 3rem;
+        padding-top: 3rem;
+    }
+
+    .header li {
+        font-size: 2rem;
     }
 
     button {

@@ -16,7 +16,7 @@ function combineArrays () {
 }
 
 combineArrays()
-//console.log (allArrays[45])
+
 
 
 
@@ -39,6 +39,13 @@ function secureKeyMaker() {
 
 const generatedPassword = secureKeyMaker();
 console.log(generatedPassword);
+
+
+
+
+
+
+
 
 
 
