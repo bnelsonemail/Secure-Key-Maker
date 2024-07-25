@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Secure Key Maker</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js" defer></script>
     <script src="dom.js" defer></script>
   </head>
@@ -20,22 +21,64 @@
         </p>
       </div>
       <div id="parameters">
+        <!-- TODO: Assign IDs to each toggle to be called in the dom.js -->
+
         <ul>
-          <li>Will be 20 characters in length.</li>
-          <li>Includes uppercase and lowercase letters.</li>
-          <li>Includes numbers.</li>
-          <li>Includes symbols.</li>
+          <li>
+            Choose how many characters long, up to 32.
+            <form>
+              <label for="numChar"></label>
+              <input
+                type="text"
+                id="numChar"
+                name="numChar"
+                maxlength="2"
+                placeholder="25"
+              />
+            </form>
+          </li>
+          <li>
+            Includes uppercase letters.
+            <label class="switch">
+              <input type="checkbox" id="uppercase" />
+              <span class="slider"></span>
+            </label>
+            <button id="UpperToggleButton">Toggle Checkbox</button>
+          </li>
+          <li>
+            Includes lowercase letters.
+            <label class="switch">
+              <input type="checkbox" id="lowercase" />
+              <span class="slider"></span>
+            </label>
+            <button id="LowerToggleButton">Toggle Checkbox</button>
+          </li>
+          <li>
+            Includes numbers.
+            <label class="switch">
+              <input type="checkbox" id="numbers" />
+              <span class="slider"></span>
+            </label>
+            <button id="NumToggleButton">Toggle Checkbox</button>
+          </li>
+          <li>
+            Includes symbols.
+            <label class="switch">
+              <input type="checkbox" id="symbols" />
+              <span class="slider"></span>
+            </label>
+            <button id="SymbolsToggleButton">Toggle Checkbox</button>
+          </li>
         </ul>
       </div>
     </header>
     <main id="btn">
       <button>Generate Secret Key!!</button>
       <div id="clipboardContainer"></div>
+      <div id="clearDataContainer"></div>
     </main>
     <div id="password-container">
-      <p id="password">
-
-      </p>
+      <p id="password"></p>
     </div>
   </body>
 </html>

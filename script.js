@@ -11,11 +11,11 @@ const allArrays = [];
 const pickedArray = [];
 
 
-function combineArrays () {
+function combineAllArrays () {
     return allArrays.push(...symbols, ...numbers, ...arrLetters, ...arrCapLetters);
 }
 
-combineArrays()
+combineAllArrays()
 
 
 
