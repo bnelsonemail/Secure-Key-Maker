@@ -11,14 +11,22 @@ const allArrays = [];
 const pickedArray = [];
 
 
-function combineAllArrays () {
-    return allArrays.push(...symbols, ...numbers, ...arrLetters, ...arrCapLetters);
-}
-
-combineAllArrays()
+// Combines all of the arrays
+const combineAllArrays = () => { return allArrays.push(...symbols, ...numbers, ...arrLetters, ...arrCapLetters)};
 
 
+// Combines the UpperCase and LowerCase arrays
+const combineUpperLower = () => { return allArrays.push(...arrLetters, ...arrCapLetters)};
 
+// Combines the UpperCase and numbers
+const combineUpperNum = () => { return allArrays.push(...arrCapLetters, ...numbers)};
+
+
+//Combines the UpperCase and Symbols
+const combineUpperSymbols = () => { return allArrays.push(...arrCapLetters, ...symbols)} ;
+
+
+// TODO: function randomArray pulls allArrays from the above functions.  If all functions are called, then the randomArray will give bad results.  How to call the correct function based upon user preferences.
 
 function randomArray () {
    for(let i = 0;i < 20;i++){
