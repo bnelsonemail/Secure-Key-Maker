@@ -26,6 +26,27 @@ const combineUpperNum = () => { return allArrays.push(...arrCapLetters, ...numbe
 const combineUpperSymbols = () => { return allArrays.push(...arrCapLetters, ...symbols)} ;
 
 
+// Combines Lower and Numbers
+const combineLowerNum = () => {return allArrays.push(...arrLetters, ...numbers)};
+
+
+// Combines Lower and Symbols
+const combineLowerSymbols = () => {return allArrays.push(...arrLetters, ...symbols)};
+
+
+// Combines Numbers and Symbols
+const combineNumSymbols = () => {allArrays.push(...numbers, ...symbols)};
+
+
+// Combines Upper, Lower, and numbers
+const combineUpperLowerNum = () => {return allArrays.push(...arrLetters, ...arrCapLetters, ...numbers)};
+
+
+// Combines Lower, numbers, and symbals
+const combineLowerNumSymbols = () => {return allArrays.push(...arrLetters, ...numbers, ...symbols)};
+
+
+
 // TODO: function randomArray pulls allArrays from the above functions.  If all functions are called, then the randomArray will give bad results.  How to call the correct function based upon user preferences.
 
 function randomArray () {
