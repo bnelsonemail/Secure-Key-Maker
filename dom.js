@@ -49,7 +49,10 @@ subData.addEventListener('click', () => {
     
 generateBtn.addEventListener('click', () => {
     getUserInputs()
-    console.log('user inputs: ' + userInputs);
+    analyzeUserInputs(userInputs)
+    randomArray(userInputs)
+    const password = secureKeyMaker(pickedArray)
+    console.log('password: ' + password);
 
     
     const clipboardContainer = document.getElementById('clipboardContainer');
@@ -68,7 +71,7 @@ generateBtn.addEventListener('click', () => {
                 clipboardBtn.addEventListener('click', () => {
                     console.log('copy clicked');
 
-                    const generatedPassword = secureKeyMaker();
+                    const generatedPassword = password;
                     copyToClipboard(generatedPassword);
                     alert('Password Copied to Clipboard!');
                 });
