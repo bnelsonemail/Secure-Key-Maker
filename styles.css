@@ -33,7 +33,7 @@ body {
     font-size: 5rem;
 }
 
-.header li {
+.header li, #parameters {
     font-size: 1.3rem;
 }
 
@@ -131,7 +131,7 @@ button {
         padding-top: 1.5rem;
     }
 
-    .header li {
+    .header li, #parameters {
         font-size: 1.6rem;
     }
 
@@ -152,7 +152,7 @@ button {
         padding-top: 2rem;
     }
 
-    .header li {
+    .header li, #parameters {
         font-size: 1.3rem;
     }
 
@@ -173,7 +173,7 @@ button {
         padding-top: 3rem;
     }
 
-    .header li {
+    .header li, #parameters {
         font-size: 2rem;
     }
 
