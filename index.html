@@ -23,7 +23,7 @@
         <div id="parameters">
             <ul>
                 <li>
-                    Choose how many characters long, up to 32.
+                    Choose how many characters long, up to 99.
                     <form class="userInputs">
                         <label for="numChar">Number of Characters:</label>
                         <input type="text" id="numChar" name="numChar" maxlength="2" placeholder="25" />
@@ -58,15 +58,17 @@
                 </li>
             </ul>
             <div class="button" id="subDataContainer">
-                <button type="button" id="subData">Submit Prefences</button>
+                <button type="button" id="subData">Submit Preferences</button>
             </div>
                     </form>
         </div>
     </header>
     <main class="button">
-        <div id="generateContainer"></div>
-        <div id="clipboardContainer"></div>
-        <div id="clearDataContainer"></div>
+        <div id="btnContainer">
+            <div id="generateContainer"></div>
+            <div id="clipboardContainer"></div>
+            <div id="clearDataContainer"></div>
+        </div>
     </main>
     <div id="password-container">
         <p id="password"></p>
