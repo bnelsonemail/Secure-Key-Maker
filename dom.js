@@ -28,23 +28,32 @@ subData.addEventListener('click', () => {
 
     // Get the updated user inputs
     const updatedUserInputs = getUserInputs();
-    //console.log('updated User Inputs:', updatedUserInputs);
+    console.log('updated User Inputs:', updatedUserInputs);
+    console.log('======================')
+    analyzeUserInputs(updatedUserInputs)
+    
 
-    const generateContainer = document.getElementById('generateContainer')
-    const clipboardContainer = document.getElementById('clipboardContainer');
-    const clearDataContainer = document.getElementById('clearDataContainer');
 
     // Check if the generate button already exists
     if (!document.getElementById('generateBtn')) {
+        const generateContainer = document.getElementById('generateContainer')
         const generateBtn = document.createElement('button');
         generateBtn.id = 'generateBtn';
         generateBtn.innerText = 'Generate Secret Key!!';
         generateContainer.append(generateBtn);
+    
+    } else {
+        console.log('Generate button already exists');
+    }
 
-        generateBtn.addEventListener('click', () => {
-            getUserInputs()
-            console.log('user inputs: ' + userInputs);
+    
+generateBtn.addEventListener('click', () => {
+    getUserInputs()
+    console.log('user inputs: ' + userInputs);
 
+    
+    const clipboardContainer = document.getElementById('clipboardContainer');
+    const clearDataContainer = document.getElementById('clearDataContainer');
             //const generatedPassword = secureKeyMaker();
             //copyToClipboard(generatedPassword);
             //alert('Password Copied to Clipboard!');
@@ -81,20 +90,16 @@ subData.addEventListener('click', () => {
                 console.log('Clear data button already exists');
             }
         });
-    } else {
-        console.log('Generate button already exists');
-    }
-    
-    
+})
+     
 
     // Disable the generate password button from appending anything after the first click
     clearAppendedData();
 
-    // Generate password and append to the screen
-    const generatedPassword = secureKeyMaker();
-    displayPasswordContainer.innerText = generatedPassword; // Assuming secureKeyMaker returns a string
-    return updatedUserInputs
-});
+    
+    //displayPasswordContainer.innerText = generatedPassword; // Assuming secureKeyMaker returns a string
+    // return updatedUserInputs
+//});
 
 function clearAppendedData() {
     displayPasswordContainer.innerHTML = '';
@@ -132,3 +137,4 @@ const clearScreen = () => { return location.reload(); };
 console.log('Initial userInputs:', getUserInputs());
 
 
+//const generateBtn = document.createElement('button');

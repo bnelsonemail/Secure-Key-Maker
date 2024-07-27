@@ -3,7 +3,7 @@
 // import { getUserInputs } from './dom.js';
 
 
-
+console.log('script')
 
 const symbols = ['!','@','#','$','%','&','-'];
 const numbers = [1,2,3,4,5,6,7,8,9]
@@ -59,7 +59,11 @@ const combineLowerNumSymbols = () => {return allArrays.push(...arrLetters, ...nu
 /*  logic to change input string to number
 let str = '23'; let num = parseInt(str, 10); // 10 is the radix (base) parameter console.log(num); // Output: 23
 */
+ // function to select appropriate function to use for random pass code:
 
+function analyzeUserInputs (userInputs){
+    console.log(`updated user inputs from script: ${userInputs}`)
+}
 function randomArray () {
    for(let i = 0;i < 20;i++){
     let randomIndex = Math.floor(Math.random() * allArrays.length);
