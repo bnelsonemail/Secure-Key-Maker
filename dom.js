@@ -1,41 +1,39 @@
+// dom.js
+
 const userInputs = {
     numChar: "",
     uppercase: false,
     lowercase: false,
     numbers: false, 
     symbols: false
-}
-
-const userInputNumChar = document.getElementById('numChar')
-userInputNumChar.addEventListener('submit', () => {
-    userInputs.userInputNumChar()
-    console.log(userInputs)
-})
-
+};
 
 const btn = document.getElementById('btn');
-const displayPasswordContainer = document.getElementById('password-container')
+const displayPasswordContainer = document.getElementById('password-container');
 
-$(document).ready(function() {
-    $('#toggleButton').click(function() {
-        var checkbox = $('#myCheckbox');
-        checkbox.prop('checked', !checkbox.prop('checked'));
-    });
-});
+// Function to update and return the userInputs object
+function getUserInputs() {
+    userInputs.numChar = document.getElementById('numChar').value;
+    userInputs.uppercase = document.getElementById('uppercase').checked;
+    userInputs.lowercase = document.getElementById('lowercase').checked;
+    userInputs.numbers = document.getElementById('numbers').checked;
+    userInputs.symbols = document.getElementById('symbols').checked;
 
-
-function clearAppendedData () {
-    displayPasswordContainer.innerHTML = ' ';
+    return userInputs;
 }
 
 btn.addEventListener('click', () => {
-    console.log('button clicked')
+    console.log('button clicked');
 
-    const clipboardContainer = document.getElementById('clipboardContainer')
-    const clearDataContainer = document.getElementById('clearDataContainer')
-    
-     // Check if the clipboard button already exists
-     if (!document.getElementById('clipboardBtn')) {
+    // Get the updated user inputs
+    const updatedUserInputs = getUserInputs();
+    console.log('updated User Inputs:', updatedUserInputs);
+
+    const clipboardContainer = document.getElementById('clipboardContainer');
+    const clearDataContainer = document.getElementById('clearDataContainer');
+
+    // Check if the clipboard button already exists
+    if (!document.getElementById('clipboardBtn')) {
         const clipboardBtn = document.createElement('button');
         clipboardBtn.id = 'clipboardBtn';
         clipboardBtn.innerText = 'Copy to Clipboard';
@@ -52,31 +50,33 @@ btn.addEventListener('click', () => {
         console.log('Clipboard button already exists');
     }
 
-    // check if the clear and reload button already exists
+    // Check if the clear and reload button already exists
     if (!document.getElementById('clearDataBtn')) {
-
         const clearDataBtn = document.createElement('button');
-        clearDataBtn.id = 'clearDataBtn'
+        clearDataBtn.id = 'clearDataBtn';
         clearDataBtn.innerText = 'Clear & Reload';
         clearDataContainer.append(clearDataBtn);
 
         clearDataBtn.addEventListener('click', () => {
-            clearScreen()
+            clearScreen();
         });
-
     } else {
-        console.log('Clear data button already exists')
+        console.log('Clear data button already exists');
     }
-    // disable the generate password button from appending anything after the first click
+
+    // Disable the generate password button from appending anything after the first click
     clearAppendedData();
 
-    // generate password and append to the screen
+    // Generate password and append to the screen
     const generatedPassword = secureKeyMaker();
-    displayPasswordContainer.append(generatedPassword)
+    displayPasswordContainer.innerText = generatedPassword; // Assuming secureKeyMaker returns a string
+    theUpdatedUserInputs()
+    return updatedUserInputs
+});
 
-})
-
-
+function clearAppendedData() {
+    displayPasswordContainer.innerHTML = '';
+}
 
 function copyToClipboard(text) {
     if (navigator.clipboard && window.isSecureContext) {
@@ -103,5 +103,14 @@ function copyToClipboard(text) {
     }
 }
 
+const clearScreen = () => { return location.reload(); };
 
-const clearScreen = () => { return location.reload();}
+// Example of using updated user inputs outside the click event
+// You can call getUserInputs() to get the latest inputs whenever needed
+console.log('Initial userInputs:', getUserInputs());
+
+// Use the getUserInputs function as needed
+const theUpdatedUserInputs = () => {
+    getUserInputs();
+    console.log('Updated User Inputs from dom.js file:', updatedUserInputs);
+} 
