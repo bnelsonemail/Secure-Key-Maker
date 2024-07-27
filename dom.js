@@ -51,9 +51,11 @@ generateBtn.addEventListener('click', () => {
     getUserInputs()
     analyzeUserInputs(userInputs)
     randomArray(userInputs)
+    disableButton()
     const password = secureKeyMaker(pickedArray)
     console.log('password: ' + password);
     displayPasswordContainer.append(password)
+
 
     
     const clipboardContainer = document.getElementById('clipboardContainer');

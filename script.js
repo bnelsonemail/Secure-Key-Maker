@@ -61,7 +61,11 @@ const generatedPassword = secureKeyMaker(pickedArray);
 console.log(generatedPassword);
 
 
-
+function disableButton() {
+    const button = document.getElementById('generateBtn');
+    button.disabled = true;
+    button.textContent = 'Button Disabled';
+}
 
 
 
