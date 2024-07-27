@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Secure Key Maker</title>
@@ -8,77 +8,67 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js" defer></script>
     <script src="dom.js" defer></script>
-  </head>
-  <body>
+</head>
+<body>
     <header class="header">
-      <div id="heading">
-        <h1>Welcome to the Realm of Secure and Secret Key Making!!!!</h1>
-      </div>
-      <div id="description">
-        <p>
-          This site will generate strong passwords that can be used to secure
-          your information. The passwords will be secured with the following:
-        </p>
-      </div>
-      <div id="parameters">
-        <!-- TODO: Assign IDs to each toggle to be called in the dom.js -->
-
-        <ul>
-          <li>
-            Choose how many characters long, up to 32.
-            <form>
-              <label for="numChar"></label>
-              <input
-                type="text"
-                id="numChar"
-                name="numChar"
-                maxlength="2"
-                placeholder="25"
-              />
-            </form>
-          </li>
-          <li>
-            Includes uppercase letters.
-            <label class="switch">
-              <input type="checkbox" id="uppercase" />
-              <span class="slider"></span>
-            </label>
-            <button id="upperToggleButton">Toggle Checkbox</button>
-          </li>
-          <li>
-            Includes lowercase letters.
-            <label class="switch">
-              <input type="checkbox" id="lowercase" />
-              <span class="slider"></span>
-            </label>
-            <button id="lowerToggleButton">Toggle Checkbox</button>
-          </li>
-          <li>
-            Includes numbers.
-            <label class="switch">
-              <input type="checkbox" id="numbers" />
-              <span class="slider"></span>
-            </label>
-            <button id="numToggleButton">Toggle Checkbox</button>
-          </li>
-          <li>
-            Includes symbols.
-            <label class="switch">
-              <input type="checkbox" id="symbols" />
-              <span class="slider"></span>
-            </label>
-            <button id="symbolsToggleButton">Toggle Checkbox</button>
-          </li>
-        </ul>
-      </div>
+        <div id="heading">
+            <h1>Welcome to the Realm of Secure and Secret Key Making!!!!</h1>
+        </div>
+        <div id="description">
+            <p>
+                This site will generate strong passwords that can be used to secure
+                your information. The passwords will be secured with the following:
+            </p>
+        </div>
+        <div id="parameters">
+            <ul>
+                <li>
+                    Choose how many characters long, up to 32.
+                    <form class="userInputs">
+                        <label for="numChar">Number of Characters:</label>
+                        <input type="text" id="numChar" name="numChar" maxlength="2" placeholder="25" />
+                </li>
+                <li>
+                    Includes uppercase letters.
+                    <label class="switch">
+                        <input type="checkbox" id="uppercase" />
+                        <span class="slider"></span>
+                    </label>
+                </li>
+                <li>
+                    Includes lowercase letters.
+                    <label class="switch">
+                        <input type="checkbox" id="lowercase" />
+                        <span class="slider"></span>
+                    </label>
+                </li>
+                <li>
+                    Includes numbers.
+                    <label class="switch">
+                        <input type="checkbox" id="numbers" />
+                        <span class="slider"></span>
+                    </label>
+                </li>
+                <li>
+                    Includes symbols.
+                    <label class="switch">
+                        <input type="checkbox" id="symbols" />
+                        <span class="slider"></span>
+                    </label>
+                </li>
+            </ul>
+            <div class="button" id="btnContainer">
+                <button type="button" id="btn">Generate Secret Key!!</button>
+            </div>
+                    </form>
+        </div>
     </header>
-    <main id="btn">
-      <button>Generate Secret Key!!</button>
-      <div id="clipboardContainer"></div>
-      <div id="clearDataContainer"></div>
+    <main class="button">
+        <div id="clipboardContainer"></div>
+        <div id="clearDataContainer"></div>
     </main>
     <div id="password-container">
-      <p id="password"></p>
+        <p id="password"></p>
     </div>
-  </body>
+</body>
 </html>

@@ -1,3 +1,18 @@
+const userInputs = {
+    numChar: "",
+    uppercase: false,
+    lowercase: false,
+    numbers: false, 
+    symbols: false
+}
+
+const userInputNumChar = document.getElementById('numChar')
+userInputNumChar.addEventListener('submit', () => {
+    userInputs.userInputNumChar()
+    console.log(userInputs)
+})
+
+
 const btn = document.getElementById('btn');
 const displayPasswordContainer = document.getElementById('password-container')
 

@@ -49,6 +49,10 @@ const combineLowerNumSymbols = () => {return allArrays.push(...arrLetters, ...nu
 
 // TODO: function randomArray pulls allArrays from the above functions.  If all functions are called, then the randomArray will give bad results.  How to call the correct function based upon user preferences.
 
+/*  logic to change input string to number
+let str = '23'; let num = parseInt(str, 10); // 10 is the radix (base) parameter console.log(num); // Output: 23
+*/
+
 function randomArray () {
    for(let i = 0;i < 20;i++){
     let randomIndex = Math.floor(Math.random() * allArrays.length);
